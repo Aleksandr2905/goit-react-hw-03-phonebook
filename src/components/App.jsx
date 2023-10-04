@@ -16,7 +16,7 @@ export class App extends Component {
     filter: '',
   };
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(_, prevState) {
     if (this.state.contacts !== prevState.contacts) {
       const stringifiedContacts = JSON.stringify(this.state.contacts);
       localStorage.setItem('keyContacts', stringifiedContacts);
